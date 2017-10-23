@@ -1,3 +1,16 @@
+<?php
+error_reporting(E_ALL ^ E_WARNING);
+error_reporting(E_ALL & ~E_NOTICE);
+session_start();
+include '../config.php';
+include '../para.php';
+include '../page_.php';
+
+$pager = new Page;
+$page = $_GET['page'];
+if(empty($page))
+$page = 1;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,3 +60,4 @@
 	</content>
 </body>
 </html>
+
